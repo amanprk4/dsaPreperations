@@ -1,7 +1,7 @@
-// <---------------- Data Structure ---------------->
+# Data Structure
 
-// Linked List
-
+## Linked List
+```
 class Node {
   constructor(value) {
     this.value = value;
@@ -16,7 +16,7 @@ class SinglyLinkedList {
     this.length = 0;
   }
 
-  // Add Item
+   Add Item
 
   addItemEnd(node) {
     if (!this.head) {
@@ -98,7 +98,7 @@ class SinglyLinkedList {
     this.head = prev;
   }
 
-  // display all
+   display all
 
   displayAll() {
     let curr = this.head;
@@ -109,29 +109,33 @@ class SinglyLinkedList {
   }
 }
 
-// let singleLinkedList = new SinglyLinkedList();
+ let singleLinkedList = new SinglyLinkedList();
 
-// singleLinkedList.addItemEnd(new Node('Aman'));
-// singleLinkedList.addItemEnd(new Node('is'));
-// singleLinkedList.addItemEnd(new Node('a'));
-// singleLinkedList.addItemEnd(new Node('good'));
-// singleLinkedList.addItemEnd(new Node('person'));
+ singleLinkedList.addItemEnd(new Node('Aman'));
+ singleLinkedList.addItemEnd(new Node('is'));
+ singleLinkedList.addItemEnd(new Node('a'));
+ singleLinkedList.addItemEnd(new Node('good'));
+ singleLinkedList.addItemEnd(new Node('person'));
 
-// singleLinkedList.addItemStart(new Node('Hello!!'))
+ singleLinkedList.addItemStart(new Node('Hello!!'))
 
-// // singleLinkedList.removeFromEnd();
-// // singleLinkedList.removeFromStart();
-// // console.log(singleLinkedList.getFromAPosition(0))
+  singleLinkedList.removeFromEnd();
+  singleLinkedList.removeFromStart();
+  console.log(singleLinkedList.getFromAPosition(0))
 
-// singleLinkedList.addAtNewPosition(1,new Node('Mr. '))
-// singleLinkedList.removeAtPosition(1);
+ singleLinkedList.addAtNewPosition(1,new Node('Mr. '))
+ singleLinkedList.removeAtPosition(1);
 
-// singleLinkedList.reverseLinkedList()
+ singleLinkedList.reverseLinkedList()
 
-// singleLinkedList.displayAll()
+ singleLinkedList.displayAll()
 
-// doubly linked list
+```
 
+## doubly linked list
+
+
+``` 
 class Node2 {
   constructor(value) {
     this.value = value;
@@ -140,13 +144,13 @@ class Node2 {
   }
 }
 
-// Stacks and Queues
+ Stacks and Queues
 
-// Stacks
-// LIFO principle -> JS call stack, Undo and redo, browser history
-// Can be implemented using arrays as well as LinkedList
-// If we are using array -> Use push and pop at the end
-// If we are using a singly linked list -> use push and pop at the start
+ Stacks
+ LIFO principle -> JS call stack, Undo and redo, browser history
+ Can be implemented using arrays as well as LinkedList
+ If we are using array -> Use push and pop at the end
+ If we are using a singly linked list -> use push and pop at the start
 
 class Stack {
   constructor() {
@@ -155,7 +159,7 @@ class Stack {
     this.size = 0;
   }
 
-  // Adding and removing to begin of the list
+   Adding and removing to begin of the list
   push(node) {
     if (!this.first) {
       this.first = node;
@@ -194,26 +198,30 @@ class Stack {
   }
 }
 
-// let stack = new Stack();
+ let stack = new Stack();
 
-// stack.push(new Node(1))
-// stack.push(new Node(2))
-// stack.push(new Node(3))
-// stack.push(new Node(4))
-// stack.push(new Node(5))
-// stack.push(new Node(6))
+ stack.push(new Node(1))
+ stack.push(new Node(2))
+ stack.push(new Node(3))
+ stack.push(new Node(4))
+ stack.push(new Node(5))
+ stack.push(new Node(6))
 
-// console.log(stack.pop())
-// console.log(stack.pop())
+ console.log(stack.pop())
+ console.log(stack.pop())
 
-// stack.displayAll();
+ stack.displayAll();
 
-// Queue
+```
 
-// FIFO principle
-// -> use case: background tasks, printing
-// for arrays, use push and shift or unshift and pop
-// for linkedList, push at the end and pop from the start
+## Queue
+
+> FIFO principle
+- use case: background tasks, printing
+- for arrays, use push and shift or unshift and pop
+- for linkedList, push at the end and pop from the start
+
+```
 
 class Queue {
   constructor() {
@@ -258,27 +266,30 @@ class Queue {
   }
 }
 
-// const queue = new Queue();
+ const queue = new Queue();
 
-// queue.enqueue(new Node(1))
-// queue.enqueue(new Node(2))
-// queue.enqueue(new Node(3))
-// queue.enqueue(new Node(4))
-// queue.enqueue(new Node(5))
+ queue.enqueue(new Node(1))
+ queue.enqueue(new Node(2))
+ queue.enqueue(new Node(3))
+ queue.enqueue(new Node(4))
+ queue.enqueue(new Node(5))
 
-// console.log(queue.dequeue());
+ console.log(queue.dequeue());
 
-// queue.displayAll()
+ queue.displayAll()
 
-// Binary search trees
+```
 
-// Non linear data structure
-// Linked list is a special case of a tree
-// HTML is a tree kinda structure
-// Network routing
-// Abstract syntax tree
-// AI
+## Binary search trees
 
+- Non linear data structure
+- Linked list is a special case of a tree
+- HTML is a tree kinda structure
+- Network routing
+- Abstract syntax tree
+- AI
+
+```
 class BSTNode {
   constructor(value) {
     this.left = null;
@@ -340,7 +351,7 @@ class BinarySearchTree {
     return findNode(this.root, node);
   }
 
-  //   Tree traversal
+     Tree traversal
 
   traverseBFS() {
     const queue = [this.root];
@@ -414,50 +425,48 @@ myBST.insert(new BSTNode(87));
 myBST.insert(new BSTNode(4));
 myBST.insert(new BSTNode(15));
 
-// console.log(myBST.find(new BSTNode(135)));
+ console.log(myBST.find(new BSTNode(135)));
 
-// console.log(myBST);
-// console.log('BFS',myBST.traverseBFS());
-// console.log('DFS Preorder',myBST.traversePreOrder());
-// console.log('DFS Postorder',myBST.traversePostOrder());
-// console.log('DFS InOrder',myBST.traverseInOrder());
-/*
-Tree traversals
-
-First one is breadth first search
-Second one is depth first
+ console.log(myBST);
+ console.log('BFS',myBST.traverseBFS());
+ console.log('DFS Preorder',myBST.traversePreOrder());
+ console.log('DFS Postorder',myBST.traversePostOrder());
+ console.log('DFS InOrder',myBST.traverseInOrder());
 
 
-3 types of DFS
+```
+## Tree traversals
+
+- First one is breadth first search
+- Second one is depth first
+
+
+> 3 types of DFS
 1. In Order
 2. Pre Order
 3. Post Order
 
 
-Pre Order is Node -> Left -> Right
-Post order is Left -> Right -> Node
-In Order is Left -> Node -> Right
+- Pre Order is Node -> Left -> Right
+- Post order is Left -> Right -> Node
+- In Order is Left -> Node -> Right
 
-When to use which?
-Depends on the tree structure
-
-
-*/
-
-// Binary heaps
-
-/*
-Max children are 2
-Max heap -> All the children are less than parent
-Min heap -> All children are greater than parent
-Left child is added first
+> When to use which?
+- Depends on the tree structure
 
 
-Children = ParentIdx*2 + 1, ParentIdx*2 + 2
-Parent = Math.floor((Child - 1)/2)
+## Binary heaps
 
-*/
+- Max children are 2
+- Max heap -> All the children are less than parent
+- Min heap -> All children are greater than parent
+- Left child is added first
 
+
+- Children = ParentIdx*2 + 1, ParentIdx*2 + 2
+- Parent = Math.floor((Child - 1)/2)
+
+```
 class MaxHeap {
   heap = [];
   constructor() {
@@ -528,35 +537,33 @@ class MaxHeap {
   }
 }
 
-// let maxHeap = new MaxHeap();
+ let maxHeap = new MaxHeap();
 
-// maxHeap.addItem(23);
-// // maxHeap.addItem(223);
-// maxHeap.addItem(3);
-// maxHeap.addItem(87);
-// maxHeap.addItem(82);
-// maxHeap.addItem(9);
-// maxHeap.addItem(84);
-// maxHeap.addItem(72);
+ maxHeap.addItem(23);
+  maxHeap.addItem(223);
+ maxHeap.addItem(3);
+ maxHeap.addItem(87);
+ maxHeap.addItem(82);
+ maxHeap.addItem(9);
+ maxHeap.addItem(84);
+ maxHeap.addItem(72);
 
-// console.log(maxHeap.heap)
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.removeMax());
-// console.log(maxHeap.heap)
+ console.log(maxHeap.heap)
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.removeMax());
+ console.log(maxHeap.heap)
 
-// Priority Queue
+```
 
-/* 
+## Priority Queue
 
-data structure where each element has a priority associated with it
-It is a type of min heap only (since mostly P0 is considered more priority)
+> data structure where each element has a priority associated with it. It is a type of min heap only (since mostly P0 is considered more priority)
 
-*/
-
+```
 class PriorityNode {
   constructor(data, priority) {
     this.data = data;
@@ -597,23 +604,25 @@ class PriorityQueue {
   }
 }
 
-// const hospitalQueue = new PriorityQueue();
+ const hospitalQueue = new PriorityQueue();
 
-// hospitalQueue.enqueueItem(new PriorityNode('Fracture',1))
-// hospitalQueue.enqueueItem(new PriorityNode('TB',4))
-// hospitalQueue.enqueueItem(new PriorityNode('fever',20))
-// hospitalQueue.enqueueItem(new PriorityNode('Cancer',0))
-// hospitalQueue.enqueueItem(new PriorityNode('back pain',15))
+ hospitalQueue.enqueueItem(new PriorityNode('Fracture',1))
+ hospitalQueue.enqueueItem(new PriorityNode('TB',4))
+ hospitalQueue.enqueueItem(new PriorityNode('fever',20))
+ hospitalQueue.enqueueItem(new PriorityNode('Cancer',0))
+ hospitalQueue.enqueueItem(new PriorityNode('back pain',15))
 
-// console.log(hospitalQueue.queue);
+ console.log(hospitalQueue.queue);
 
-// Graphs
+```
 
-// Any node with connection between them
-// use case -> social network, map, google maps, recommendations
+## Graphs
 
-// Two ways to store it. Adjacency matrix and Adjacency list
+- Any node with connection between them
+- use case -> social network, map, google maps, recommendations
+- Two ways to store it. Adjacency matrix and Adjacency list
 
+```
 class Graph {
   constructor() {
     this.adjacencyList = {};
@@ -643,9 +652,9 @@ class Graph {
     this.adjacencyList[v2] = this.adjacencyList[v2].filter((x) => x !== v1);
   }
 
-  // Graph traversals
+   Graph traversals
 
-  // DFS
+   DFS
 
   traverseDFS(startPoint) {
     let vertices = []
@@ -684,7 +693,7 @@ class Graph {
     return res;
   }
 
-  // BFS
+   BFS
 
   traverseBFS(startPoint) {
     let res = [];
@@ -709,54 +718,47 @@ class Graph {
 
 const graph = new Graph();
 
-// graph.addVertex('India')
-// graph.addVertex('Pakistan')
-// graph.addVertex('Germany')
-// graph.addVertex('Europe')
-// graph.addVertex('Dublin')
-// graph.addVertex('Spain')
-// graph.addVertex('Sweden')
+ graph.addVertex('India')
+ graph.addVertex('Pakistan')
+ graph.addVertex('Germany')
+ graph.addVertex('Europe')
+ graph.addVertex('Dublin')
+ graph.addVertex('Spain')
+ graph.addVertex('Sweden')
 
-// graph.addEdge('India','Spain');
-// graph.addEdge('Dublin','Pakistan');
-// graph.addEdge('Europe','Germany');
-// graph.addEdge('Sweden','Europe');
+ graph.addEdge('India','Spain');
+ graph.addEdge('Dublin','Pakistan');
+ graph.addEdge('Europe','Germany');
+ graph.addEdge('Sweden','Europe');
 
-// console.log(graph.adjacencyList);
-// graph.removeVertex('Pakistan')
-// graph.removeEdge('Germany','Europe')
-// console.log(graph.adjacencyList);
+ console.log(graph.adjacencyList);
+ graph.removeVertex('Pakistan')
+ graph.removeEdge('Germany','Europe')
+ console.log(graph.adjacencyList);
 
-// graph.addVertex("A");
-// graph.addVertex("B");
-// graph.addVertex("C");
-// graph.addVertex("D");
-// graph.addVertex("E");
-// graph.addVertex("F");
+ graph.addVertex("A");
+ graph.addVertex("B");
+ graph.addVertex("C");
+ graph.addVertex("D");
+ graph.addVertex("E");
+ graph.addVertex("F");
 
-// graph.addEdge("A", "B");
-// graph.addEdge("D", "B");
-// graph.addEdge("D", "F");
-// graph.addEdge("D", "E");
-// graph.addEdge("F", "E");
-// graph.addEdge("C", "E");
-// graph.addEdge("A", "C");
+ graph.addEdge("A", "B");
+ graph.addEdge("D", "B");
+ graph.addEdge("D", "F");
+ graph.addEdge("D", "E");
+ graph.addEdge("F", "E");
+ graph.addEdge("C", "E");
+ graph.addEdge("A", "C");
 
-// console.log(graph.adjacencyList);
-// console.log(graph.traverseDFS('E'))
-// console.log(graph.traverseDFSIterative('E'))
-// console.log(graph.traverseBFS('E'))
+ console.log(graph.adjacencyList);
+ console.log(graph.traverseDFS('E'))
+ console.log(graph.traverseDFSIterative('E'))
+ console.log(graph.traverseBFS('E'))
+```
 
+## Dijkstra's Algorithm
 
-
-
-
-/* 
-Dijkstra's Algorithm
-
-Uses priority queue section
-Works on a weighted graph
-Finds shortest distance between two nodes
-
-
-*/
+- Uses priority queue section
+- Works on a weighted graph
+- Finds shortest distance between two nodes
